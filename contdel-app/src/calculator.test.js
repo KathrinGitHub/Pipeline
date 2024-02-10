@@ -9,6 +9,6 @@ test.each([
     [[5, "%", 2], 1],
     [[5, "%", 0], "division by 0"],
     [[2, "$", 3], "error"],
-])("calculates %p expecting %p", (arguments, result) => {
-    expect(calculate(arguments[0], arguments[1], arguments[2])).toBe(result)
+])("calculates %p expecting %p", (input, result) => {
+    expect(calculate(input[0], input[1], input[2])).toBe(result);
 });
