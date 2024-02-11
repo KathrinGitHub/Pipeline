@@ -2,7 +2,7 @@
 FROM node:18
 
 # Setze das Arbeitsverzeichnis im Container
-WORKDIR /usr/src/app/pipeline/src
+WORKDIR /usr/src/app/pipeline
 
 # Kopiere die Abhängigkeitsdefinitionen ins Arbeitsverzeichnis
 COPY package*.json ./
