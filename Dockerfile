@@ -1,17 +1,17 @@
-# Verwende ein offizielles Node.js-Image als Basis
+# Use node version
 FROM node:18
 
-# Setze das Arbeitsverzeichnis im Container
+# Set working directory
 WORKDIR /usr/src/app/pipeline
 
-# Kopiere die Abhängigkeitsdefinitionen ins Arbeitsverzeichnis
+# Copy dependencies to working directory
 COPY package*.json ./
 
-# Kopiere den Rest des Codes ins Arbeitsverzeichnis
+# Copy code to working directory
 COPY . .
 
-# Exponiere den Port, auf dem die Anwendung läuft
+# Export Port
 EXPOSE 3000
 
-# Definiere den Befehl, um die Anwendung auszuführen
+# Defines the commands
 CMD ["npm", "start"]
